@@ -1,0 +1,300 @@
+/* Hampton Park Uniting Place — Site Stylesheet */
+/* Colour palette */
+:root {
+  --purple:       #541974;
+  --purple-light: #72239c;
+  --purple-dark:  #320f45;
+  --gold:         #c9a84c;
+  --lavender:     #f5eafa;
+  --lavender-mid: #dcc8ea;
+  --lavender-pale:#ead5f5;
+  --white:        #ffffff;
+  --text:         #333333;
+  --text-mid:     #555555;
+  --text-light:   #777777;
+  --border:       #dcc8ea;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--text);
+  background: #f0eaf5;
+}
+
+a { color: var(--purple-light); text-decoration: none; }
+a:hover { color: var(--gold); text-decoration: underline; }
+
+/* ── WRAPPER ── */
+.site-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: var(--white);
+  box-shadow: 0 0 24px rgba(84,25,116,0.12);
+}
+
+/* ── TOP BAR ── */
+.topbar {
+  background: var(--purple-dark);
+  color: var(--lavender-mid);
+  padding: 7px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  font-family: Arial, sans-serif;
+}
+.topbar a { color: var(--gold); text-decoration: none; }
+.topbar a:hover { text-decoration: underline; }
+.topbar .info { display: flex; gap: 18px; flex-wrap: wrap; }
+
+/* ── HEADER ── */
+.site-header {
+  background: var(--white);
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 3px solid var(--gold);
+}
+.logo-area { display: flex; align-items: center; gap: 14px; }
+.logo-circle {
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: var(--purple);
+  border: 2px solid var(--gold);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--gold);
+  font-size: 11px; font-weight: 700;
+  text-align: center; line-height: 1.2;
+  font-family: Arial, sans-serif;
+  flex-shrink: 0;
+}
+.logo-text h1 { font-size: 19px; font-weight: 400; color: var(--purple); line-height: 1.2; }
+.logo-text p  { font-size: 11px; color: var(--text-light); font-family: Arial, sans-serif; letter-spacing: .04em; }
+.worship-header { text-align: right; font-family: Arial, sans-serif; }
+.worship-header .lbl { font-size: 11px; color: var(--text-light); }
+.worship-header .tm  { font-size: 20px; color: var(--purple); font-weight: 700; }
+
+/* ── NAV ── */
+.site-nav {
+  background: var(--purple);
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 12px;
+}
+.site-nav a {
+  color: var(--lavender-mid);
+  text-decoration: none;
+  font-size: 11px;
+  padding: 10px 12px;
+  display: block;
+  font-family: Arial, sans-serif;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  transition: color .15s;
+}
+.site-nav a:hover,
+.site-nav a.active { color: var(--gold); background: rgba(201,168,76,.08); }
+
+/* ── HERO ── */
+.hero {
+  background: linear-gradient(150deg, var(--purple-dark) 0%, var(--purple) 100%);
+  min-height: 220px;
+  display: flex; align-items: center; justify-content: center;
+  text-align: center;
+  padding: 40px 32px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c9a84c' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.hero-content { position: relative; z-index: 1; }
+.hero h2 { font-size: 26px; font-weight: 400; color: var(--white); margin-bottom: 10px; }
+.hero p  { font-size: 14px; color: var(--lavender-mid); font-family: Arial, sans-serif; max-width: 500px; margin: 0 auto; }
+.hero .gold { color: var(--gold); }
+
+/* ── PAGE HERO (inner pages) ── */
+.page-hero {
+  background: linear-gradient(150deg, var(--purple-dark) 0%, var(--purple) 100%);
+  padding: 36px 32px;
+  text-align: center;
+}
+.page-hero h2 { font-size: 22px; font-weight: 400; color: var(--white); margin-bottom: 6px; }
+.page-hero p  { font-size: 13px; color: var(--lavender-mid); font-family: Arial, sans-serif; }
+.page-hero .gold { color: var(--gold); }
+
+/* ── MISSION STRIP ── */
+.mission-strip {
+  background: var(--lavender);
+  border-bottom: 0.5px solid var(--border);
+  padding: 18px 24px;
+  text-align: center;
+}
+.mission-strip h3 { font-size: 10px; color: var(--purple); letter-spacing: .1em; text-transform: uppercase; margin-bottom: 5px; font-family: Arial, sans-serif; font-weight: 700; }
+.mission-strip p  { font-size: 14px; color: var(--text-mid); font-style: italic; max-width: 620px; margin: 0 auto; }
+
+/* ── QUICK LINKS ── */
+.quick-links {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-bottom: 0.5px solid var(--border);
+}
+.quick-link {
+  padding: 15px 10px; text-align: center;
+  border-right: 0.5px solid var(--border);
+  text-decoration: none; display: block;
+  transition: background .15s;
+}
+.quick-link:last-child { border-right: none; }
+.quick-link:hover { background: var(--lavender); }
+.quick-link .ql-icon  { font-size: 20px; margin-bottom: 4px; display: block; }
+.quick-link .ql-label { font-size: 11px; font-weight: 700; color: var(--purple); display: block; font-family: Arial, sans-serif; }
+
+/* ── BODY GRID ── */
+.body-grid {
+  display: grid;
+  grid-template-columns: 1fr 270px;
+}
+
+/* ── MAIN CONTENT ── */
+.main-content { padding: 24px; border-right: 0.5px solid var(--border); }
+
+.content-block { margin-bottom: 28px; padding-bottom: 28px; border-bottom: 0.5px solid var(--lavender-pale); }
+.content-block:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.content-block h2 { font-size: 17px; font-weight: 400; color: var(--purple); margin-bottom: 10px; padding-bottom: 6px; border-bottom: 2px solid var(--gold); display: inline-block; }
+.content-block p  { font-size: 13px; color: var(--text-mid); margin-bottom: 9px; font-family: Arial, sans-serif; line-height: 1.75; }
+.content-block ul { font-size: 13px; color: var(--text-mid); font-family: Arial, sans-serif; padding-left: 20px; margin-bottom: 9px; }
+.content-block ul li { margin-bottom: 4px; }
+
+.read-more { font-size: 12px; color: var(--purple-light); text-decoration: none; font-family: Arial, sans-serif; font-weight: 700; }
+.read-more:hover { color: var(--gold); text-decoration: underline; }
+
+/* image placeholder */
+.img-ph {
+  width: 100%; height: 160px;
+  background: var(--lavender-pale);
+  border: 0.5px solid var(--border);
+  border-radius: 4px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 14px;
+  color: var(--purple-light);
+  font-size: 12px; font-family: Arial, sans-serif; font-style: italic;
+}
+.img-ph.short { height: 120px; }
+.img-ph.tall  { height: 220px; }
+
+/* ── PROGRAM CARDS ── */
+.prog-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 12px; }
+.prog-card { background: var(--lavender); border-left: 3px solid var(--gold); padding: 10px 13px; }
+.prog-card h4 { font-size: 12px; font-weight: 700; color: var(--purple); margin-bottom: 3px; font-family: Arial, sans-serif; }
+.prog-card p  { font-size: 11px; color: var(--text-mid); margin: 0; font-family: Arial, sans-serif; line-height: 1.5; }
+
+/* ── INFO BOX ── */
+.info-box { background: var(--lavender); border: 0.5px solid var(--border); border-left: 4px solid var(--purple); padding: 14px 16px; margin-bottom: 14px; border-radius: 0 4px 4px 0; }
+.info-box p { font-size: 13px; color: var(--text-mid); margin: 0; font-family: Arial, sans-serif; line-height: 1.7; }
+.info-box strong { color: var(--purple); }
+
+/* ── SIDEBAR ── */
+.sidebar { padding: 22px 16px; background: var(--lavender); }
+.sb-block { margin-bottom: 22px; }
+.sb-block h3 {
+  font-size: 10px; font-weight: 700; color: var(--purple);
+  letter-spacing: .08em; text-transform: uppercase;
+  font-family: Arial, sans-serif;
+  border-bottom: 2px solid var(--gold);
+  padding-bottom: 5px; margin-bottom: 12px;
+}
+
+.worship-box { background: var(--purple); color: var(--white); padding: 15px; text-align: center; border-radius: 4px; margin-bottom: 10px; }
+.worship-box .wd { font-size: 9px; letter-spacing: .1em; text-transform: uppercase; color: var(--gold); margin-bottom: 2px; font-family: Arial, sans-serif; }
+.worship-box .wt { font-size: 26px; color: var(--gold); line-height: 1; margin-bottom: 3px; }
+.worship-box .wa { font-size: 11px; color: var(--lavender-mid); font-family: Arial, sans-serif; }
+.sb-note { font-size: 12px; color: var(--text-mid); font-family: Arial, sans-serif; line-height: 1.6; }
+
+.event-item { padding: 7px 0; border-bottom: 0.5px solid var(--border); }
+.event-item:last-child { border-bottom: none; }
+.event-date { font-size: 10px; color: var(--purple-light); font-weight: 700; font-family: Arial, sans-serif; text-transform: uppercase; letter-spacing: .04em; }
+.event-name { font-size: 12px; color: var(--text); font-family: Arial, sans-serif; }
+
+/* newsletter */
+.nl-box { background: var(--white); border: 0.5px solid var(--border); border-radius: 4px; padding: 12px; }
+.nl-box p { font-size: 11px; color: var(--text-mid); margin-bottom: 8px; font-family: Arial, sans-serif; line-height: 1.6; }
+.nl-box input { width: 100%; padding: 6px 8px; font-size: 11px; border: 0.5px solid #ccc; border-radius: 3px; margin-bottom: 6px; font-family: Arial, sans-serif; }
+.nl-box button { width: 100%; padding: 8px; background: var(--purple); color: var(--gold); border: none; border-radius: 3px; font-size: 11px; font-weight: 700; cursor: pointer; font-family: Arial, sans-serif; text-transform: uppercase; letter-spacing: .05em; }
+.nl-box button:hover { background: var(--gold); color: var(--purple); }
+
+.ack-box { font-size: 11px; color: var(--text-mid); font-style: italic; font-family: Georgia, serif; line-height: 1.7; padding: 9px 12px; border-left: 3px solid var(--gold); background: var(--white); }
+
+/* ── CONTACT FORM ── */
+.contact-form label { display: block; font-size: 12px; color: var(--purple); font-weight: 700; font-family: Arial, sans-serif; margin-bottom: 4px; margin-top: 12px; }
+.contact-form input,
+.contact-form select,
+.contact-form textarea { width: 100%; padding: 8px 10px; font-size: 13px; border: 0.5px solid #ccc; border-radius: 3px; font-family: Arial, sans-serif; color: var(--text); }
+.contact-form textarea { min-height: 100px; resize: vertical; }
+.contact-form button { margin-top: 14px; padding: 10px 24px; background: var(--purple); color: var(--gold); border: none; border-radius: 3px; font-size: 13px; font-weight: 700; cursor: pointer; font-family: Arial, sans-serif; text-transform: uppercase; letter-spacing: .05em; }
+.contact-form button:hover { background: var(--gold); color: var(--purple); }
+
+/* ── DISCOVER STRIP ── */
+.discover-strip { background: var(--purple); padding: 20px 24px; }
+.discover-strip h3 { font-size: 10px; color: var(--gold); letter-spacing: .1em; text-transform: uppercase; margin-bottom: 14px; text-align: center; font-family: Arial, sans-serif; }
+.disc-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+.disc-card { background: rgba(255,255,255,.07); border: 0.5px solid rgba(201,168,76,.3); border-radius: 4px; padding: 13px 8px; text-align: center; cursor: pointer; text-decoration: none; display: block; }
+.disc-card:hover { background: rgba(201,168,76,.13); }
+.disc-icon  { font-size: 18px; margin-bottom: 5px; display: block; }
+.disc-label { font-size: 11px; color: var(--gold); font-family: Arial, sans-serif; font-weight: 700; }
+
+/* ── FOOTER ── */
+.site-footer { background: var(--purple-dark); padding: 16px 24px; font-family: Arial, sans-serif; }
+.footer-nav { display: flex; flex-wrap: wrap; gap: 4px 14px; margin-bottom: 12px; }
+.footer-nav a { color: var(--lavender-mid); text-decoration: none; font-size: 10px; text-transform: uppercase; letter-spacing: .05em; }
+.footer-nav a:hover { color: var(--gold); }
+.footer-bottom { border-top: 0.5px solid rgba(255,255,255,.1); padding-top: 9px; display: flex; justify-content: space-between; align-items: center; }
+.footer-copy { font-size: 10px; color: rgba(220,200,234,.45); }
+.social-links { display: flex; gap: 7px; }
+.social-btn { width: 26px; height: 26px; border-radius: 50%; background: rgba(255,255,255,.08); border: 0.5px solid rgba(201,168,76,.3); display: flex; align-items: center; justify-content: center; color: var(--gold); font-size: 11px; text-decoration: none; font-weight: 700; }
+
+/* ── FULL-WIDTH CONTENT (no sidebar) ── */
+.full-content { padding: 28px 32px; }
+.full-content h2 { font-size: 18px; font-weight: 400; color: var(--purple); margin-bottom: 12px; padding-bottom: 6px; border-bottom: 2px solid var(--gold); display: inline-block; }
+.full-content h3 { font-size: 15px; font-weight: 700; color: var(--purple); margin: 18px 0 8px; font-family: Arial, sans-serif; }
+.full-content p  { font-size: 13px; color: var(--text-mid); margin-bottom: 10px; font-family: Arial, sans-serif; line-height: 1.75; }
+.full-content ul { font-size: 13px; color: var(--text-mid); font-family: Arial, sans-serif; padding-left: 20px; margin-bottom: 10px; }
+.full-content ul li { margin-bottom: 5px; }
+.full-content .img-ph { height: 200px; }
+
+/* ── CALENDAR TABLE ── */
+.calendar-table { width: 100%; border-collapse: collapse; font-family: Arial, sans-serif; font-size: 13px; margin-top: 12px; }
+.calendar-table th { background: var(--purple); color: var(--gold); padding: 9px 12px; text-align: left; font-size: 11px; letter-spacing: .05em; text-transform: uppercase; }
+.calendar-table td { padding: 9px 12px; border-bottom: 0.5px solid var(--lavender-pale); color: var(--text-mid); vertical-align: top; }
+.calendar-table tr:hover td { background: var(--lavender); }
+.event-tag { display: inline-block; font-size: 10px; padding: 2px 8px; border-radius: 10px; font-weight: 700; margin-left: 6px; }
+.tag-worship  { background: var(--purple); color: var(--gold); }
+.tag-programs { background: var(--gold); color: var(--purple); }
+.tag-arts     { background: var(--lavender-mid); color: var(--purple-dark); }
+.tag-garden   { background: #c5e8c5; color: #1a4d1a; }
+.tag-support  { background: #fce8c0; color: #7a4a00; }
+
+/* ── MAP PLACEHOLDER ── */
+.map-ph { width: 100%; height: 220px; background: var(--lavender-pale); border: 0.5px solid var(--border); border-radius: 4px; display: flex; align-items: center; justify-content: center; color: var(--purple-light); font-family: Arial, sans-serif; font-size: 12px; font-style: italic; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 680px) {
+  .body-grid { grid-template-columns: 1fr; }
+  .sidebar { border-top: 0.5px solid var(--border); }
+  .quick-links { grid-template-columns: repeat(2, 1fr); }
+  .prog-grid  { grid-template-columns: 1fr; }
+  .disc-grid  { grid-template-columns: repeat(2, 1fr); }
+  .logo-text h1 { font-size: 15px; }
+  .topbar .info { gap: 8px; }
+  .worship-header { display: none; }
+}
+
+
+
