@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Hampton Park Uniting Place</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="site-wrapper">
+  <div class="topbar">
+    <div class="info">
+      <span>1 Coral Drive, Hampton Park VIC 3976</span>
+      <span>(03) 9799 7994</span>
+      <a href="mailto:office@unitingplace.org">office@unitingplace.org</a>
+    </div>
+    <div style="display:flex;gap:12px">
+      <a href="https://www.facebook.com/HamptonParkUnitingChurch">Facebook</a>
+      
+    </div>
+  </div>
+  <div class="site-header">
+    <div class="logo-area">
+      <img src="images/logo.jpg" alt="Hampton Park Uniting Place" style="height:56px;width:auto;">
+      <div class="logo-text">
+        <h1><a href="index.html" style="color:inherit;text-decoration:none">Hampton Park Uniting Place</a></h1>
+        <p>Uniting Church in Australia &nbsp;&middot;&nbsp; Hampton Park VIC</p>
+      </div>
+    </div>
+    <div class="worship-header">
+      <div class="lbl">Sunday worship</div>
+      <div class="tm">10:00 am</div>
+    </div>
+  </div>
+  <nav class="site-nav">
+    <a href="index.html">Home</a>
+    <a href="worship.html">Worship</a>
+    <a href="mission.html">Mission</a>
+    <a href="programs.html">Programs</a>
+    <a href="support.html">Community Support</a>
+    <a href="arts.html">Arts</a>
+    <a href="garden.html">Community Garden</a>
+    <a href="events.html">Events</a>
+    <a href="venue-hire.html">Venue Hire</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+
+  <div class="page-hero">
+    <h2><span class="gold">Contact Us</span></h2>
+    <p>We'd love to hear from you — get in touch any time</p>
+  </div>
+
+  <div class="body-grid">
+    <main class="main-content">
+
+      <div class="content-block">
+        <h2>Get in Touch</h2>
+        <p>Whether you have a question, would like more information about our programs, or simply want to connect — please reach out. We will get back to you as soon as we can.</p>
+
+        <form class="contact-form" onsubmit="handleSubmit(event)">
+          <label for="name">Your name *</label>
+          <input type="text" id="name" placeholder="First and last name" required>
+
+          <label for="email">Email address *</label>
+          <input type="email" id="email" placeholder="your@email.com" required>
+
+          <label for="phone">Phone number</label>
+          <input type="tel" id="phone" placeholder="(optional)">
+
+          <label for="subject">Subject *</label>
+          <select id="subject" required>
+            <option value="">— Please select —</option>
+            <option>General enquiry</option>
+            <option>Sunday worship</option>
+            <option>Community programs</option>
+            <option>Community support service</option>
+            <option>Arts / Artist Group</option>
+            <option>Community Garden</option>
+            <option>Volunteering</option>
+            <option>Venue hire</option>
+            <option>Pastoral care</option>
+            <option>Other</option>
+          </select>
+
+          <label for="message">Message *</label>
+          <textarea id="message" placeholder="How can we help?" required></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+        <div id="form-success" style="display:none;margin-top:16px;padding:14px 16px;background:#eaf5ea;border:0.5px solid #a8d5a8;border-radius:4px;font-family:Arial,sans-serif;font-size:13px;color:#1a4d1a;">
+          ✔ Thank you for your message. We will be in touch shortly.
+        </div>
+      </div>
+
+      <div class="content-block" id="giving">
+        <h2>Give &amp; Donate</h2>
+        <p>Your financial support enables us to run our community programs, maintain our Community Pantry, and support those in need in the Hampton Park area. Every gift — large or small — makes a real difference.</p>
+        <div class="info-box">
+          <p><strong>Bank Transfer</strong><br>
+          Account name: Hampton Park Uniting Place<br>
+          BSB: [to be confirmed]<br>
+          Account No: [to be confirmed]<br>
+          Reference: Donation</p>
+        </div>
+        <p>Donations of $2 or more are tax deductible. Please <a href="mailto:office@unitingplace.org">contact us</a> if you would like a receipt for tax purposes.</p>
+      </div>
+
+    </main>
+    <aside class="sidebar">
+
+      <div class="sb-block" style="padding:22px 16px;background:var(--lavender);">
+        <h3 style="font-size:10px;font-weight:700;color:#541974;letter-spacing:.08em;text-transform:uppercase;font-family:Arial,sans-serif;border-bottom:2px solid #c9a84c;padding-bottom:5px;margin-bottom:12px;">Our Location</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3142.503899207655!2d145.2654329758383!3d-38.03534354673405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad6111d1a9aed5d%3A0x730cd54ed23b525d!2s1%20Coral%20Dr%2C%20Hampton%20Park%20VIC%203976!5e0!3m2!1sen!2sau!4v1778056731889!5m2!1sen!2sau" width="100%" height="250" style="border:0;border-radius:4px;display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div style="font-family:Arial,sans-serif;font-size:12px;color:#555;margin-top:12px;line-height:1.7;">
+          <p><strong style="color:#541974;">Address</strong><br>1 Coral Drive<br>Hampton Park VIC 3976</p>
+          <p style="margin-top:8px"><strong style="color:#541974;">Phone</strong><br>(03) 9799 7994</p>
+          <p style="margin-top:8px"><strong style="color:#541974;">Email</strong><br><a href="mailto:office@unitingplace.org" style="color:#72239c">office@unitingplace.org</a></p>
+          <p style="margin-top:8px"><strong style="color:#541974;">Office Hours</strong><br>Thursday 9:30 am – 3:00 pm<br>Other times by appointment</p>
+        </div>
+      </div>
+
+      <div class="sb-block" style="padding:0 16px 22px;">
+        <h3 style="font-size:10px;font-weight:700;color:#541974;letter-spacing:.08em;text-transform:uppercase;font-family:Arial,sans-serif;border-bottom:2px solid #c9a84c;padding-bottom:5px;margin-bottom:12px;">Find Us on Sunday</h3>
+        <div class="worship-box">
+          <div class="wd">Every Sunday</div>
+          <div class="wt">10:00 am</div>
+          <div class="wa">1 Coral Drive, Hampton Park</div>
+        </div>
+        <p class="sb-note">All are welcome. Come as you are.</p>
+      </div>
+
+      <div class="sb-block" style="padding:0 16px 22px;">
+        <h3 style="font-size:10px;font-weight:700;color:#541974;letter-spacing:.08em;text-transform:uppercase;font-family:Arial,sans-serif;border-bottom:2px solid #c9a84c;padding-bottom:5px;margin-bottom:12px;">Acknowledgement of Country</h3>
+        <div class="ack-box">We acknowledge the Traditional Custodians of the land on which we meet and worship, and pay our respects to Elders past, present and emerging.</div>
+      </div>
+
+    </aside>
+  </div>
+
+  <div id="site-footer"></div>
+</div>
+<script src="js/shared.js"></script>
+<script>
+initPage();
+function handleSubmit(e) {
+  e.preventDefault();
+  document.getElementById('form-success').style.display = 'block';
+  e.target.reset();
+  e.target.style.display = 'none';
+}
+</script>
+</body>
+</html>
